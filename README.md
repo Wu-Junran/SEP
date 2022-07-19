@@ -1,7 +1,9 @@
 # Structural Entropy Guided Graph Hierarchical Pooling
 
-<img src="./figs/sep-framework.pdf" width="400" height="200">
-
+<p align="middle">
+<img src="./figs/sep-framework.jpg" width="400" height="200">
+</p>
+    
 This code reproduces the experimental results obtained with the SEP layer as presented in the ICML 2022 paper:
 
 [ICML](https://proceedings.mlr.press/v162/wu22b/wu22b.html) 
@@ -18,65 +20,11 @@ Junran Wu, Xueyuan Chen, Ke Xu, Shangzhe Li
 
 ## Graph Reconstruction - Local Structure Damage
 A graph reconstruction experiment, which quantifies the structural information retained by pooling layer, is conducted to directly reveal the damage caused by previous hierarchical pooling methods to graph's local structures.
-
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/origin-ring.pdf" width="110" height="110">
-    <div>Original Ring</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/topk-ring.pdf" width="110" height="110">
-    <div>TopKPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/sag-ring.pdf" width="110" height="110">
-    <div>SAGPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/asap-ring.pdf" width="110" height="110">
-    <div>ASAPPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/DiffPool-ring.png" width="112" height="112">
-    <div>DiffPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/minCutPool-ring.pdf" width="110" height="110">
-    <div>minCutPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/SEP-U-ring.pdf" width="110" height="110">
-    <div>SEP</div>
-</div>
-
-
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/origin-grid.pdf" width="110" height="110">
-    <div>Original Grid</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/topk-grid.pdf" width="110" height="110">
-    <div>TopKPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/sag-grid.pdf" width="110" height="110">
-    <div>SAGPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/asap-grid.pdf" width="110" height="110">
-    <div>ASAPPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/DiffPool-grid.png" width="112" height="112">
-    <div>DiffPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/minCutPool-grid.pdf" width="110" height="110">
-    <div>minCutPool</div>
-</div>
-<div style="display:inline-block;text-align:center">
-    <img src="./figs/SEP-U-grid.pdf" width="110" height="110">
-    <div>SEP</div>
-</div>
+    
+Original |  TopKPool | SAGPool | ASAPPool | DiffPool | minCutPool | SEP
+:---:|:---:|:---:|:---:|:---:|:---:|:---:
+<img src="./figs/origin-ring.jpg" width="110" height="110"> |  <img src="./figs/topk-ring.jpg" width="110" height="110"> | <img src="./figs/sag-ring.jpg" width="110" height="110"> | <img src="./figs/asap-ring.jpg" width="110" height="110"> | <img src="./figs/DiffPool-ring.png" width="110" height="110"> | <img src="./figs/minCutPool-ring.jpg" width="110" height="110"> | <img src="./figs/SEP-U-ring.jpg" width="110" height="110">
+<img src="./figs/origin-grid.jpg" width="110" height="110"> |  <img src="./figs/topk-grid.jpg" width="110" height="110"> | <img src="./figs/sag-grid.jpg" width="110" height="110"> | <img src="./figs/asap-grid.jpg" width="110" height="110"> | <img src="./figs/DiffPool-grid.png" width="110" height="110"> | <img src="./figs/minCutPool-grid.jpg" width="110" height="110"> | <img src="./figs/SEP-U-grid.jpg" width="110" height="110">
 
 Run ```python trainer_sepu_synthetic.py -d ring/grid``` to train an autoencoder and compute the reconstructed graph. It is possible to switch between the `ring` and `grid` graphs. Results are provided in terms of the Mean Squared Error.
 
